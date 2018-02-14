@@ -4,7 +4,7 @@ Welcome to mplcursors' documentation!
 :mod:`mplcursors` provides interactive data selection cursors for Matplotlib_.
 It is inspired from mpldatacursor_, with a much simplified API.
 
-.. _Matplotlib: http://matplotlib.org
+.. _Matplotlib: https://matplotlib.org
 .. _mpldatacursor: https://github.com/joferkington/mpldatacursor
 
 :mod:`mplcursors` requires Python 3, and Matplotlib≥2.1.
@@ -241,11 +241,12 @@ importantly, it also means that once an annotation is added, :mod:`mplcursors`
 cannot remove it (as it needs to know what artists to redraw to restore the
 original state).
 
-As a workaround, either switch off blitting, or unset the ``animated`` property
-on the relevant artists before using a cursor.  (The only other fix I can
-envision is to walk the entire tree of artists, record their visibility status,
-and try to later restore them; but this would fail for `~.ArtistAnimation`\s
-which themselves fiddle with artist visibility).
+As a workaround, either switch off blitting, or unset the ``animated``
+property on the relevant artists before using a cursor.  (The only other
+fix I can envision is to walk the entire tree of artists, record their
+visibility status, and try to later restore them; but this would fail for
+:class:`~matplotlib.animation.ArtistAnimation`\s which themselves fiddle with
+artist visibility).
 
 Indices and tables
 ==================
